@@ -1,3 +1,5 @@
+-- Creating the database
+CREATE DATABASE supermarket;
 -- Creating the table and importing the data from the CSV files
 
 CREATE TABLE pos_transactions(
@@ -12,7 +14,7 @@ CREATE TABLE pos_transactions(
     amount DECIMAL(10,2)
 );
 
-\\copy public.pos_transactions (id, workstation_group_id, begin_date_time, end_date_time, operator_id, basket_size, t_cash, t_card, amount) FROM '/Users/robertocortez/Downloads/supermarket_project/pos_transactions.csv' DELIMITER ',' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
+\\copy public.pos_transactions (id, workstation_group_id, begin_date_time, end_date_time, operator_id, basket_size, t_cash, t_card, amount) FROM '...supermarket_project/pos_transactions.csv' DELIMITER ',' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
 
 -- Task 1: Do people make more transactions with cash or card?
 SELECT
